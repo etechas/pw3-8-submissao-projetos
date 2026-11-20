@@ -21,6 +21,9 @@ public class Projeto {
     @Column(name = "tx_titulo")
     private String titulo;
 
+    @Column(name = "tx_areaConhecimento")
+    private String areaConhecimento;
+
     @Column(name = "nr_notaInovacao")
     private BigDecimal notaInovacao;
 
