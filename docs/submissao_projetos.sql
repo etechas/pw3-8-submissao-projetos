@@ -2,7 +2,7 @@ Create database submissao_projetos
 use submissao_projetos;
 
 Create table Projeto(
-	id_projeto bigint primary key not null, 
+	id_projeto bigint identity(1,1) primary key not null, 
 	tx_titulo varchar(200) not null,
 	tx_areaConhecimento varchar(200) not null,
 	nr_notaInovacao decimal(4,2) not null,
