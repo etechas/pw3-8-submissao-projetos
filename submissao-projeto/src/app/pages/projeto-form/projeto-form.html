@@ -40,10 +40,10 @@
     }
 
     <div class="botoes">
-      <button type="submit" class="btn-salvar" [disabled]="salvando()">
+      <button type="submit" class="salvar" [disabled]="salvando()">
         {{ salvando() ? 'Salvando...' : (editando ? 'Atualizar' : 'Cadastrar') }}
       </button>
-      <a routerLink="/projetos" class="btn-cancelar">Cancelar</a>
+      <a routerLink="/projetos" class="cancelar">Cancelar</a>
     </div>
   </form>
 </div>

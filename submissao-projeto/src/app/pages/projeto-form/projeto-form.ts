@@ -4,6 +4,7 @@ import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 
 import { Projeto } from '../../models/projeto.model';
 import { ProjetoService } from '../../services/projeto.service';
+import { mensagemDeErro } from '../../utils/erro-http';
 
 @Component({
   selector: 'app-projeto-form',
@@ -47,7 +48,7 @@ export class ProjetoForm implements OnInit {
           titulo: projeto.titulo,
           areaConhecimento: projeto.areaConhecimento
         }),
-      error: () => this.mostrar('erro', 'Projeto não encontrado.')
+      error: (erro) => this.mostrar('erro', mensagemDeErro(erro, 'Projeto não encontrado.'))
     });
   }
 
@@ -74,9 +75,9 @@ export class ProjetoForm implements OnInit {
         );
         setTimeout(() => this.router.navigate(['/projetos']), 1200);
       },
-      error: () => {
+      error: (erro) => {
         this.salvando.set(false);
-        this.mostrar('erro', 'Erro ao salvar o projeto. O backend está rodando?');
+        this.mostrar('erro', mensagemDeErro(erro, 'Erro ao salvar o projeto.'));
       }
     });
   }

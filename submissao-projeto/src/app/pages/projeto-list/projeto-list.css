@@ -38,11 +38,11 @@ button {
   color: #fff;
 }
 
-.btn-avaliar { background: #2e7d32; }
-.btn-excluir { background: #c62828; }
+.avaliar { background: #2e7d32; }
+.excluir { background: #c62828; }
 
-.btn-novo,
-.btn-editar {
+.novo,
+.editar {
   display: inline-block;
   color: #fff;
   text-decoration: none;
@@ -50,8 +50,8 @@ button {
   border-radius: 4px;
 }
 
-.btn-novo   { background: #1565c0; margin-bottom: 12px; }
-.btn-editar { background: #ef6c00; }
+.novo   { background: #a605e6; margin-bottom: 12px; }
+.editar { background: #ef6c00; }
 
 .status {
   padding: 3px 8px;
@@ -66,3 +66,24 @@ button {
 
 .erro  { color: #c62828; }
 .vazio { text-align: center; color: #777; }
+
+.alerta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.sucesso      { background: #c8e6c9; color: #1b5e20; }
+.erro-alerta  { background: #ffcdd2; color: #b71c1c; }
+
+.fechar {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: inherit;
+  padding: 0 4px;
+}

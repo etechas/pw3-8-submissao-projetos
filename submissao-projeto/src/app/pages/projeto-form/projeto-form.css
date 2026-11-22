@@ -46,8 +46,8 @@ input.invalido {
   margin-top: 16px;
 }
 
-.btn-salvar,
-.btn-cancelar {
+.salvar,
+.cancelar {
   border: none;
   padding: 8px 16px;
   border-radius: 4px;
@@ -57,6 +57,6 @@ input.invalido {
   font-size: 14px;
 }
 
-.btn-salvar { background: #1565c0; }
-.btn-salvar:disabled { background: #90a4ae; cursor: not-allowed; }
-.btn-cancelar { background: #616161; }
+.salvar { background: #1565c0; }
+.salvar:disabled { background: #90a4ae; cursor: not-allowed; }
+.cancelar { background: #616161; }
