@@ -1,10 +1,11 @@
 import { Component, OnInit, inject, signal } from '@angular/core';
 import { Projeto } from '../../models/projeto.model';
 import { ProjetoService } from '../../services/projeto.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-projeto-list',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './projeto-list.html',
   styleUrl: './projeto-list.css'
 })

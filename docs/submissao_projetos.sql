@@ -11,4 +11,9 @@ Create table Projeto(
 	tp_Status varchar(9) not null 
 );
 
+ALTER TABLE dbo.Projeto ALTER COLUMN nr_notaInovacao     decimal(4,2) NULL;
+ALTER TABLE dbo.Projeto ALTER COLUMN nr_notaApresentacao decimal(4,2) NULL;
+ALTER TABLE dbo.Projeto ALTER COLUMN nr_mediaFinal       decimal(4,2) NULL;
+ALTER TABLE dbo.Projeto ALTER COLUMN tp_Status           varchar(9)   NULL;
+
 select * from Projeto
