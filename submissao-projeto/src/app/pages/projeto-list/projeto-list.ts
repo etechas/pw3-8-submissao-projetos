@@ -44,8 +44,8 @@ export class ProjetoList implements OnInit {
       })
       .subscribe({
         next: atualizado => {
-          this.projetos.update(lista => lista.map(p => (p.id === atualizado.id ? atualizado : p)));
           this.mostrar('sucesso', `Projeto "${atualizado.titulo}" avaliado: ${atualizado.status}.`);
+          this.carregar();
         },
         error: erro => this.mostrar('erro', mensagemDeErro(erro, 'Erro ao avaliar o projeto.'))
       });
