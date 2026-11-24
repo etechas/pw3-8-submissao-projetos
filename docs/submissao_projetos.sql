@@ -1,0 +1,19 @@
+Create database submissao_projetos
+use submissao_projetos;
+
+Create table Projeto(
+	id_projeto bigint identity(1,1) primary key not null, 
+	tx_titulo varchar(200) not null,
+	tx_areaConhecimento varchar(200) not null,
+	nr_notaInovacao decimal(4,2) not null,
+	nr_notaApresentacao decimal(4,2) not null,
+	nr_mediaFinal decimal(4,2) not null,
+	tp_Status varchar(9) not null 
+);
+
+ALTER TABLE dbo.Projeto ALTER COLUMN nr_notaInovacao     decimal(4,2) NULL;
+ALTER TABLE dbo.Projeto ALTER COLUMN nr_notaApresentacao decimal(4,2) NULL;
+ALTER TABLE dbo.Projeto ALTER COLUMN nr_mediaFinal       decimal(4,2) NULL;
+ALTER TABLE dbo.Projeto ALTER COLUMN tp_Status           varchar(9)   NULL;
+
+select * from Projeto
